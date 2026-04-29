@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-
 const response = {
   page: 1,
   results: [
@@ -43,12 +42,9 @@ const response = {
 };
 
 export default function App() {
- 
   const [count, setCount] = useState(0);
 
-  
   useEffect(() => {
-    
     if (count !== 0 && count % 10 === 0) {
       alert(`Angka ${count} habis dibagi oleh 10!`);
     }
@@ -57,7 +53,6 @@ export default function App() {
   return (
     <div className="min-h-screen bg-gray-100 font-sans pb-10">
       
-
       <nav className="bg-slate-800 text-white p-4 shadow-md flex justify-between items-center mb-8 px-8">
         <div className="font-bold text-xl tracking-wide">Sutan Rendy Rizaldi</div>
         <ul className="flex space-x-8 font-medium">
@@ -68,7 +63,7 @@ export default function App() {
       </nav>
 
       <main className="max-w-6xl mx-auto px-4">
-     
+        
         <section className="mb-12 bg-white p-8 rounded-xl shadow-sm text-center max-w-md mx-auto border border-gray-200">
           <h2 className="text-2xl font-bold mb-6 text-gray-800">Counter Demo</h2>
           <div className="text-5xl font-semibold mb-8 text-slate-700">{count}</div>
@@ -94,15 +89,13 @@ export default function App() {
           </div>
         </section>
 
-        
         <section>
           <h2 className="text-2xl font-bold mb-6 text-gray-800 border-b pb-2">Data Posts</h2>
-      
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {response.results.map((item) => (
               <div key={item.id} className="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col border border-gray-200 hover:shadow-md transition-shadow">
                 <img 
-                  src={`${item.image}?random=${item.id}`} // Tambahan parameter agar gambar dari picsum unik
+                  src={`${item.image}?random=${item.id}`} 
                   alt={item.title} 
                   className="w-full h-48 object-cover" 
                 />
